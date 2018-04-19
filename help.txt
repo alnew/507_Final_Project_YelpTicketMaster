@@ -1,0 +1,39 @@
+Commands available:
+
+If Command line says: Enter the name of a city:
+ *Enter one of the following cities:
+  Chicago, IL
+  San Francisco, CA
+  New York, NY
+  Ann Arbor, MI
+
+If Command line says: "Please enter a command - rating table, address, rating chart, map:  "
+ *Enter one of the following options:
+  rating table
+  address
+  rating chart
+  map
+
+
+Rating Table:
+  Will give a Plotly table with the following data:
+    Event Name
+    Event Date
+    Restaurant Name
+    Restaurant Rating
+
+Address:
+  Will give a Plotly table with the following data:
+    Restaurant Name
+    Restaurant Address
+    Event Name
+    Event Address
+
+Rating Chart:
+  Will give a Plotly bar chart with the following data:
+    The distribution of restaurant ratings in your city
+
+Map:
+  Will give a Plotly map with the following data:
+    Restaurant Name and location (latitude and longitude)
+    Event Name and location (latitude and longitude)
