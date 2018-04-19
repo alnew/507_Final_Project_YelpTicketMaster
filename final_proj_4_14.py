@@ -16,43 +16,6 @@ def params_unique_combination(baseurl, params):
 #----------------------
 # Yelp Cache
 #----------------------
-# def yelp_cache():
-#     CACHE_FNAME1 = 'yelp_data.json'
-#     try:
-#         print("Opening Yelp Cache")
-#         cache_file = open(CACHE_FNAME1, 'r')
-#         cache_contents = cache_file.read()
-#         CACHE_DICTION_1 = json.loads(cache_contents)
-#         cache_file.close()
-#     except:
-#         CACHE_DICTION_1 = {}
-#     return CACHE_DICTION_1
-#
-#
-# # class list_obj():
-# #     def __init__(self, lst):
-# #         self.list = lst
-# #     def add_to_list(add):
-# #         self.list.append(add)
-#
-# #----------------------
-# # TicketMaster Cache
-# #----------------------
-# def ticketmaster_cache():
-#     CACHE_FNAME2 = 'ticket_master_data.json'
-#     try:
-#         print("Opening TMaster Cache")
-#         cache_file = open(CACHE_FNAME2, 'r')
-#         cache_contents = cache_file.read()
-#         CACHE_DICTION_2 = json.loads(cache_contents)
-#         cache_file.close()
-#     except:
-#         CACHE_DICTION_2 = {}
-#     return CACHE_DICTION_2
-
-
-
-
 CACHE_FNAME1 = 'yelp_data.json'
 try:
     print("Opening Yelp Cache")
@@ -354,22 +317,7 @@ def init_db(db_name, csv_file):
     conn.close()
 
 
-#---------------------------------
-# CODE TO GET DATA FROM API CALLS
-#---------------------------------
-# yelp_city_lst = ["Chicago, IL", "San Francisco, CA", "New York, NY", "Ann Arbor, MI"]
-# ticket_m_city_lst = ["Chicago", "San Francisco", "New York", "Ann Arbor"]
-#
-# for city in yelp_city_lst:
-#     get_from_yelp("food", city)
-#
-# for city in ticket_m_city_lst:
-#     get_ticketmaster_data(city)
 
-#---------------------------------
-# CALL TO CREATE DATABASE
-#---------------------------------
-# init_db(DBNAME, CSV)
 
 #######################
 # DATA REPRESENTATION 1
@@ -388,11 +336,7 @@ def ratings(city):
     except Error as e:
         print(e)
 
-    # query_0 ='''
-    # SELECT Restaurants.name AS [Restaurant Name], Restaurants.rating
-    # FROM Restaurants WHERE Restaurants.city = %s
-    # '''
-    # make a plotly of list of restaurants and events
+
     cur.execute("""SELECT Restaurants.name AS [Restaurant Name], Restaurants.rating FROM Restaurants WHERE Restaurants.city like ?""",(city,))
 
     data_0 = cur.fetchall()
@@ -672,18 +616,6 @@ def ratings_bar_graph():
 # ratings_bar_graph()
 
 
-# PIE CHART OF RATINGS - THIS WORKS
-# def ratings_pie_chart():
-#     labels = list(ratings_dict.keys())
-#     values = list(ratings_dict.values())
-#
-#     trace = go.Pie(labels=labels, values=values)
-#
-#     py.plot([trace], filename='basic_pie_chart')
-# ratings_pie_chart()
-
-
-
 
 ####################################
 # INTERACTIVE PART
@@ -693,7 +625,6 @@ def load_help_text():
         return f.read()
 
 def interactive_prompt():
-    # print('-----inside interactive-----')
     help_text = load_help_text()
     response_lst = ['chicago', 'san francisco', 'new york', 'ann arbor']
     response = ''
@@ -705,11 +636,6 @@ def interactive_prompt():
         response = response.split(',')
         # print(response)
 
-
-        # FIGURE OUT WAY TO GET SPECIFIC DATA FROM SPECIFIC CITIES
-
-        # if response in response_lst:
-            # FIGURE OUT WEHRE TO PUT RESPONSE TO GET SPECIFIC DATA FROM SPECIFIC TABLES
         if 'help' in response:
             print(help_text)
             continue
@@ -718,12 +644,11 @@ def interactive_prompt():
             print("bye")
             exit()
 
-        # elif response in response_lst:
+
         elif response[0] in response_lst:
             query = input("Please enter a command - rating table, address, rating chart, map:  ")
             query = query.lower()
-            # print("HEREEEEE")
-            # query = query.split()
+
             if 'table' in query:
                 ratings(response[0])
                 names_and_ratings(response[0])
@@ -755,9 +680,9 @@ def interactive_prompt():
 # Call for Data
 #----------------
 if __name__ == "__main__":
-    # yelp_cache()
-    # ticketmaster_cache()
-
+    #---------------------------------
+    # CODE TO GET DATA FROM API CALLS
+    #---------------------------------
     yelp_city_lst = ["Chicago, IL", "San Francisco, CA", "New York, NY", "Ann Arbor, MI"]
     ticket_m_city_lst = ["Chicago", "San Francisco", "New York", "Ann Arbor"]
 
