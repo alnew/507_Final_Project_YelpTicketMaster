@@ -1,6 +1,8 @@
-# Data Sources Used:
+# 507 Final Project: Find Restaurants and Events in a City
 
-## Yelp Fusion:
+## Data Sources Used:
+
+### Yelp Fusion:
 
  - Requires an API key - How to obtain API Key:
  - Create a Yelp Account here by clicking Sign Up: https://www.yelp.com/login?return_url=%2Fdevelopers%2Fv3%2Fmanage_app
@@ -17,18 +19,18 @@ API site - https://developer.ticketmaster.com/products-and-docs/apis/discovery-a
 - Click on this page for your Consumer Key: https://developer-acct.ticketmaster.com/user/8225/apps
 
 
-**API Secrets Location**
+### API Secrets Location
 
 - Create a separate file for your API keys that you will .gitignore when pushing to GitHub
 - My Secrets File: final_proj_secrets.py
 
 
-**Postal Code Data from CSV:**
+### Postal Code Data from CSV:
 
 - Click on this link and download the .csv file: https://www.aggdata.com/node/86
 
 
-**Plotly Visualizations**
+### Plotly Visualizations
 
 - How to sign up: https://plot.ly/
 - Create a free account: https://plot.ly/ssu/
@@ -42,7 +44,7 @@ pip install Plotly if not already on your machine with the following command: pi
 - For tutorials and other visualization options, go here: https://plot.ly/python/
 
 
-**Functions**
+## Functions
 
 Some of the more important functions for this program include:
 
@@ -70,7 +72,7 @@ Some of the more important functions for this program include:
   - This function utilizes the t_master_make_request_using_cache(baseurl, params) function, which makes the actual API call if there is no data in the  ticket_master_data.json cache
 
 
-**User Guide**
+## User Guide
 
 - Fork this project, then click on the Clone or Download button, copy the link and use the following command in your command line: git clone ‘put the link here’
 - Once all of the files are in the same folder on your machine, open final_proj_4_14.py
