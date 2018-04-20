@@ -15,8 +15,8 @@ TicketMaster: API site - https://developer.ticketmaster.com/products-and-docs/ap
 
 
 API Secrets Location
-  Create a separate file for your API keys that you will .gitignore when pushing to GitHub
-  My Secrets File: final_proj_secrets.py
+  -Create a separate file for your API keys that you will .gitignore when pushing to GitHub
+  -My Secrets File: final_proj_secrets.py
 
 
 Postal Code Data from CSV:
