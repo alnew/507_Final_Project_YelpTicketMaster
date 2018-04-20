@@ -71,6 +71,11 @@ Some of the more important functions for this program include:
   - In the ticket_dict, or search parameters, is the API key, the search limit set to return 100 events, and the parameter to search by city
   - This function utilizes the t_master_make_request_using_cache(baseurl, params) function, which makes the actual API call if there is no data in the  ticket_master_data.json cache
 
+**Class Definitions**
+
+CallingData()
+- This class initializes all of the API calls
+
 
 ## User Guide
 
