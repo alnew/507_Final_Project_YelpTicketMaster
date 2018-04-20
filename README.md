@@ -1,6 +1,6 @@
-Data Sources Used:
+**Data Sources Used:**
 
-Yelp Fusion:
+**Yelp Fusion:**
 
   Requires an API key - How to obtain API Key:
   Create a Yelp Account here by clicking Sign Up: https://www.yelp.com/login?return_url=%2Fdevelopers%2Fv3%2Fmanage_app
