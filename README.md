@@ -1,13 +1,16 @@
 Data Sources Used:
 
 Yelp Fusion:
+
   Requires an API key - How to obtain API Key:
   Create a Yelp Account here by clicking Sign Up: https://www.yelp.com/login?return_url=%2Fdevelopers%2Fv3%2Fmanage_app
   Get your API key on this page: https://www.yelp.com/developers/v3/manage_app
   Required getting more than the 20 returned
 
 
-TicketMaster: API site - https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
+TicketMaster: 
+
+API site - https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
   -Required an API key - How to obtain an API key:
   -Register for an API here: https://developer-acct.ticketmaster.com/user/register
   -Log in to your account
@@ -15,11 +18,13 @@ TicketMaster: API site - https://developer.ticketmaster.com/products-and-docs/ap
 
 
 API Secrets Location
+
   -Create a separate file for your API keys that you will .gitignore when pushing to GitHub
   -My Secrets File: final_proj_secrets.py
 
 
 Postal Code Data from CSV:
+
   -Click on this link and download the .csv file: https://www.aggdata.com/node/86
 
 
@@ -37,6 +42,7 @@ Plotly Visualizations
 
 
 Functions
+
 Some of the more important functions for this program include:
 
 init_db(db_name, csv_file)
@@ -61,6 +67,7 @@ get_ticketmaster_data(ticket_city)
 
 
 User Guide
+
 -Fork this project, then click on the Clone or Download button, copy the link and use the following command in your command line: git clone ‘put the link here’
 -Once all of the files are in the same folder on your machine, open final_proj_4_14.py
 -Follow the steps above to retrieve your API keys from Yelp Fusion and TicketMaster, then put them in the file (make sure to save it): final_proj_secrets.py
