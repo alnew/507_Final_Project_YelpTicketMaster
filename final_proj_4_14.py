@@ -92,7 +92,7 @@ def get_ticketmaster_data(ticket_city):
     ticket_dict["size"] = '100'
     ticket_dict["city"] = ticket_city
 
-    m = requests.get(ticket_baseurl, ticket_dict)
+    # m = requests.get(ticket_baseurl, ticket_dict)
 
     return t_master_make_request_using_cache(ticket_baseurl, ticket_dict)
 
@@ -704,7 +704,9 @@ if __name__ == "__main__":
             for city in self.ticket_m_city_lst:
                 get_ticketmaster_data(city)
 
-    Calling_data()
+
+    m = Calling_data()
+    m.calling()
 
     #---------------------------------
     # CALL TO CREATE DATABASE
