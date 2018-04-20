@@ -705,8 +705,8 @@ if __name__ == "__main__":
                 get_ticketmaster_data(city)
 
 
-    m = Calling_data()
-    m.calling()
+    data = Calling_data()
+    data.calling()
 
     #---------------------------------
     # CALL TO CREATE DATABASE
