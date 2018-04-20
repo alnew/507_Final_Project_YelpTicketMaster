@@ -683,14 +683,6 @@ if __name__ == "__main__":
     #---------------------------------
     # CODE TO GET DATA FROM API CALLS
     #---------------------------------
-    # yelp_city_lst = ["Chicago, IL", "San Francisco, CA", "New York, NY", "Ann Arbor, MI"]
-    # ticket_m_city_lst = ["Chicago", "San Francisco", "New York", "Ann Arbor"]
-    #
-    # for city in yelp_city_lst:
-    #     get_from_yelp("food", city)
-    #
-    # for city in ticket_m_city_lst:
-    #     get_ticketmaster_data(city)
 
     class Calling_data():
         def __init__(self):
