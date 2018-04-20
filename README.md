@@ -8,27 +8,28 @@
   Required getting more than the 20 returned
 
 
-TicketMaster: 
+**TicketMaster:** 
 
 API site - https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
-  -Required an API key - How to obtain an API key:
-  -Register for an API here: https://developer-acct.ticketmaster.com/user/register
-  -Log in to your account
-  -Click on this page for your Consumer Key: https://developer-acct.ticketmaster.com/user/8225/apps
+- Required an API key - How to obtain an API key:
+- Register for an API here: https://developer-acct.ticketmaster.com/user/register
+- Log in to your account
+- Click on this page for your Consumer Key: https://developer-acct.ticketmaster.com/user/8225/apps
 
 
-API Secrets Location
+**API Secrets Location**
 
   -Create a separate file for your API keys that you will .gitignore when pushing to GitHub
   -My Secrets File: final_proj_secrets.py
 
 
-Postal Code Data from CSV:
+**Postal Code Data from CSV:**
 
   -Click on this link and download the .csv file: https://www.aggdata.com/node/86
 
 
-Plotly Visualizations
+**Plotly Visualizations**
+
   -How to sign up: https://plot.ly/
   -Create a free account: https://plot.ly/ssu/
   pip install Plotly if not already on your machine with the following command: pip install plotly
@@ -41,11 +42,12 @@ Plotly Visualizations
   -For tutorials and other visualization options, go here: https://plot.ly/python/
 
 
-Functions
+**Functions**
 
 Some of the more important functions for this program include:
 
-init_db(db_name, csv_file)
+**init_db(db_name, csv_file)**
+
   This function does the following:
   -Creates a connection for sqlite3
   -Creates all three tables for the database ('food_event.db'): Restaurants, Events, PostalCodes
@@ -54,19 +56,21 @@ init_db(db_name, csv_file)
   -Closes the connection with the database
 
 
-get_from_yelp(term, location)
+**get_from_yelp(term, location)**
+
   -This function specifies which data to get from the Yelp Fusion API
   -In the params dictionary, I set it to search by term, which in this case, I used “food” in order to search for restaurants, location, to search by city, and increased the limit to the highest amount Yelp allows to gather 50 data points per location searched
   -This function utilizes the yelp_make_request_using_cache(baseurl,params=None, headers=None) function which makes the actual API call if there is no data in the yelp_data.json cache
 
 
-get_ticketmaster_data(ticket_city)
+**get_ticketmaster_data(ticket_city)**
+
   -This function specifies which data to get from the TicketMaster API
   -In the ticket_dict, or search parameters, is the API key, the search limit set to return 100 events, and the parameter to search by city
   -This function utilizes the t_master_make_request_using_cache(baseurl, params) function, which makes the actual API call if there is no data in the  ticket_master_data.json cache
 
 
-User Guide
+**User Guide**
 
 -Fork this project, then click on the Clone or Download button, copy the link and use the following command in your command line: git clone ‘put the link here’
 -Once all of the files are in the same folder on your machine, open final_proj_4_14.py
