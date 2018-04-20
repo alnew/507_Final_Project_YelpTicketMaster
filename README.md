@@ -20,7 +20,7 @@ API Secrets Location
 
 
 Postal Code Data from CSV:
-  Click on this link and download the .csv file: https://www.aggdata.com/node/86
+  -Click on this link and download the .csv file: https://www.aggdata.com/node/86
 
 
 Plotly Visualizations
